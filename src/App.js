@@ -1,6 +1,7 @@
 
 import React from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { PostsContextProvider } from "./components/context/posts-context";
 import Home from "./components/pages/Home";
 import Lifestyle from "./components/pages/Lifestyle";
 import Business from "./components/pages/Business";
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
 
+      <PostsContextProvider>
       <BrowserRouter >
       <>
       <Navbar />
@@ -26,6 +28,9 @@ function App() {
           </Routes>
       </>
       </BrowserRouter>
+
+      </PostsContextProvider>
+
     </div>
   );
 }

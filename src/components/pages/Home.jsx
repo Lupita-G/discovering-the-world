@@ -1,10 +1,12 @@
 import React from 'react';
-import Main from '../navigation/Main';
+import Main from '../layout/Main';
+import Form from '../common/Form';
 
 const Home = () => {
     return (
         <div>
             <Main />
+            <Form />
         </div>
     );
 }
