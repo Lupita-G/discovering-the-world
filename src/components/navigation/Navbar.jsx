@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import PostForm from "../common/PostForm"; 
+import '../styles/Navbar.css';
 
 const Navbar = () => {
+
   return (
-      <div className="navbar navbar-expand-lg navbar-dark bg-black">
+      <div className="navbar fixed-top navbar-expand-lg navbar-dark bg-black">
         <button
           className="navbar-toggler"
           type="button"
@@ -54,7 +57,9 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+        
         </div>
+        <PostForm />
       </div>
   );
 };

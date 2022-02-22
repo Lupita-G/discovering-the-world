@@ -66,27 +66,14 @@ export const usePosts = () => {
 
   const [posts, setPosts] = useState(postsList);
 
-  const [formIsDisplayed, setFormIsDisplayed] = useState(false);
-
-  const formDisplayedHandler = () => {
-    setFormIsDisplayed(!formIsDisplayed);
-  };
-
   const addPostHandler = (newPost) => {
     setPosts((prev) => [...prev, newPost]);
-    console.log(posts);
+    console.log(newPost);
   };
 
-  const onSubmitHandler = (event) => {
-    event.preventDefault();
-    formDisplayedHandler();
-  };
 
   return {
     posts,
-    onSubmitHandler,
-    formDisplayedHandler,
-    formIsDisplayed,
     addPostHandler,
   };
 };

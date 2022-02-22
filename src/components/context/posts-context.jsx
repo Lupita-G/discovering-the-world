@@ -3,9 +3,6 @@ import { usePosts } from "../hooks/usePosts";
 
 export const postsContext = createContext({
   posts: [],
-  onsubmitHandler: () => {},
-  formDisplayedHandler: () => {},
-  formIsDisplayed: {},
   addPostHandler: () => {},
 });
 

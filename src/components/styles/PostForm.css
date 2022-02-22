@@ -1,10 +1,9 @@
 .container-one {
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 50px;
     padding: 100px 100px;
     height: 400px;
-    text-align: center; 
+    text-align: center;
 }
 .container-one h3 {
       font-weight: 500;
@@ -19,6 +18,9 @@
     padding: 10px 0;
     position: relative;
     z-index: 2; 
+}
+.container-two .form-label {
+      color: #ffffff;
 }
 .container-two input {
       appearance: none;
@@ -35,7 +37,7 @@
       font-weight: 300; 
 }
 .container-one button {
-      background-color: #000000;
+      background-color: #708090;
       color: #ffffff;
       appearance: none;
       outline: 0;
@@ -46,11 +48,15 @@
       cursor: pointer;
       font-size: 18px;
       transition-duration: 0.25s;
-    margin: 10px; 
-  
+      margin: 10px;
 }
     
 .container-one button:hover {
       background-color: #FFA500;
       color: #000000;
+}
+.btn {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
 }

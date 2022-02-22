@@ -1,12 +1,13 @@
 import React from 'react';
+import Postlist from '../common/PostList';
 import Main from '../layout/Main';
-import Form from '../common/Form';
 
 const Home = () => {
     return (
         <div>
             <Main />
-            <Form />
+            <Postlist />
+            
         </div>
     );
 }
