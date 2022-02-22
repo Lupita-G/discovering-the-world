@@ -1,10 +1,9 @@
 import React from 'react';
 
-
 const Work = () => {
     return (
         <div>
-             <h1>work</h1>
+            <h1>Work</h1>
         </div>
     );
 }

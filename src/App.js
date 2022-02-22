@@ -1,6 +1,7 @@
 
 import React from "react";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { PostsContextProvider } from "./components/context/posts-context";
 import Home from "./components/pages/Home";
 import Lifestyle from "./components/pages/Lifestyle";
 import Business from "./components/pages/Business";
@@ -8,13 +9,16 @@ import Food from "./components/pages/Food";
 import Travel from "./components/pages/Travel";
 import Work from "./components/pages/Work";
 import Navbar from "./components/navigation/Navbar";
+import PageNotFound from "./components/pages/PageNotFound";
+import { Footer } from "./components/layout/Footer";
+import {Banner} from "./components/layout/Banner";
 
 function App() {
   return (
     <div className="App">
 
+      <PostsContextProvider>
       <BrowserRouter >
-      <>
       <Navbar />
         <Routes>
           <Route path="/All" element={<Home/>} />
@@ -23,9 +27,13 @@ function App() {
           <Route path="/food" element={<Food/>} />
           <Route path="/travel" element={<Travel/>} />
           <Route path="/work" element={<Work/>} />
-          </Routes>
-      </>
+         <Route path="*" element={<PageNotFound />} />
+        </Routes>
+        <Banner />
+      <Footer />
       </BrowserRouter>
+      </PostsContextProvider>
+
     </div>
   );
 }
