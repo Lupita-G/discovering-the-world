@@ -48,12 +48,22 @@ export const usePosts = () => {
       comments: [],
     },
   ];
+  const validation = {
+    required: {
+      value: true,
+      message: "This section is required",
+    },
+    maxLength: {
+      value: 200,
+      message: "Only 200 characters are allowed",
+    },
+    minLength: {
+      value: 3,
+      message: "At least two characters are allowed",
+    },
+  };
 
   const [posts, setPosts] = useState(postsList);
-  const [comments, setComments] = useState(); 
-
-
-
 
   const addPostHandler = (newPost) => {
     setPosts((prev) => [...prev, newPost]);
@@ -63,5 +73,6 @@ export const usePosts = () => {
   return {
     posts,
     addPostHandler,
+    validation,
   };
 };

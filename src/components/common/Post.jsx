@@ -1,4 +1,5 @@
 import "../styles/Post.css";
+import Comments from "./Comments";
 
 const Post = ({ post }) => {
   return (
@@ -11,6 +12,7 @@ const Post = ({ post }) => {
         <p>{post.description}</p>
         <p className="category">{post.category}</p>
       </div>
+      <Comments/>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import "../styles/PostForm.css";
 
 const PostForm = () => {
-  const { addPostHandler } = useContext(postsContext);
+  const { addPostHandler, validation} = useContext(postsContext);
   const {
     register,
     handleSubmit,
@@ -22,6 +22,11 @@ const PostForm = () => {
       },
     },
   });
+  const [modal, setModal] = useState(false);
+  const openModal = () => {
+    setModal(!modal);
+  };
+
 
   const onSubmit = (data, event) => {
     const newPost = {
@@ -40,24 +45,8 @@ const PostForm = () => {
     event.target.reset();
   };
 
-  const validation = {
-    required: {
-      value: true,
-      message: "This section is required",
-    },
-    maxLength: {
-      value: 200,
-      message: "Only 200 characters are allowed",
-    },
-    minLength: {
-      value: 3,
-      message: "At least two characters are allowed",
-    },
-  };
-  const [modal, setModal] = useState(false);
-  const openModal = () => {
-    setModal(!modal);
-  };
+ 
+
 
   const body = (
     <div className="modalForm">
