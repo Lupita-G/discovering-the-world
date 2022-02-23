@@ -1,0 +1,20 @@
+.post-section {
+  display: grid;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  row-gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 70%;
+}
+
+@media screen and (max-width: 575px) {
+  .post-section {
+    grid-template: repeat(12, 1fr) / 1fr;
+    margin: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 20px;
+  }
+}
